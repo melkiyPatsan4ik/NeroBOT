@@ -10,10 +10,10 @@ namespace NeroBOT
                 "Nero:I am so happy to meet you again!", "Nero:Creator I was waiting for you!" };
             int index = rand.Next(start.Length);
             Console.WriteLine(start[index]);
-            string[] badDay = {"Nero:Someone again made you sad?", "Nero: that's why you are here right?",
+            string[] badDay = {"Nero:Someone again made you sad?", "Nero:And that's why you are here right?",
                 "Nero:If that because of relationships, think if it's really someone you need? " +
-                "Nero:Maybe you are missing someone who is interested in you. Nero:Just think about that", "Nero:Hope you are gonna be fine" };
-            int badDayIndex = rand.Next(badDay.Length);
+                "Maybe you are missing someone who is interested in you. Just think about that", "Nero:Hope you are gonna be fine" };
+
 
             string[] fullRandom = {"I", "Like", "Awesome", "Chill", "Cool", "Crazy", "Cute", "Dope", "Epic",
                 "Fantastic", "Fun", "Funky", "Gnarly", "Groovy", "Happy", "Hilarious", "Hip", "Hot", "Insane",
@@ -50,6 +50,7 @@ namespace NeroBOT
             }
             while (true)
             {
+                int badDayIndex = rand.Next(badDay.Length);
                 string input = Console.ReadLine();
                 if (input.Contains("Hello") || input.Contains("Hi"))
                 {
@@ -59,6 +60,7 @@ namespace NeroBOT
                 else if (input.Contains("Bad") && lastBotResponse == "Nero:How is your day Stephan?"
                      || input.Contains("I feel sad"))
                 {
+                    rand.Next(badDay.Length);
                     Console.WriteLine(badDay[badDayIndex]);
                     lastBotResponse = badDay[badDayIndex];
 
