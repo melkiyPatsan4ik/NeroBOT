@@ -48,6 +48,9 @@ namespace NeroBOT
                 "drawing", "writing", "singing", "painting", "coding", "swimming", "biking", "hiking", "camping",
                 "skiing", "photography", "gardening", "yoga", "meditation", "shopping", "fishing", "playing an instrument",
                 "learning a new language", "volunteering", "listening to music", "watching TV", "surfing the internet" };
+            string[] dotaHeroCarry = { "Slark", "Specte", "Morphling", "Lifestealer" };
+            string[] dotaHeroSupport = { "Dazzle", "Vengeful Spirit", "Weaver" };
+            string[] dotaHeroOfflane = {"Axe","Bristleback","Timbersaw"};
             // 
 
             while (true)
@@ -116,6 +119,14 @@ namespace NeroBOT
                     Console.WriteLine("Nero:I ask you how is your day if you would write me hi." +
                         "You can ask my favourite doramas, what should you do today, say 3 random words. And I will answer with random phrase if " +
                         "you are saying something I don't know. ");
+                }
+                else if(words.Contains("what") && words.Contains("hero") && words.Contains("dota"))
+                {
+                    int dotaHeroCarryIndex = rand.Next(dotaHeroCarry.Length);
+                    int dotaHeroSupportIndex = rand.Next(dotaHeroSupport.Length);
+                    int dotaheroOfflaneIndex = rand.Next(dotaHeroOfflane.Length);
+                    Console.WriteLine("Nero:For carry " + dotaHeroCarry[dotaHeroCarryIndex] +
+                        " For support " + dotaHeroSupport[dotaHeroSupportIndex] + " For offlane " + dotaHeroOfflane[dotaheroOfflaneIndex]);
                 }
                 else
                 {
