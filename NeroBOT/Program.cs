@@ -92,6 +92,10 @@ namespace NeroBOT
                 else if (allYesVariations() && lastBotResponse == "Nero:And that's why you are here right?")
                 {
                     Console.WriteLine("Nero:It's easy to predict you");
+                }  
+                else if (allNoVariations() && lastBotResponse == "Nero:And that's why you are here right?")
+                {
+                    Console.WriteLine("Nero:So probably just to test new phrase");
                 }
 
                 else if (input.Contains("tell me your favourite doramas") || input.Contains("favourite doramas"))
