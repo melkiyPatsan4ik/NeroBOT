@@ -83,7 +83,7 @@ namespace NeroBOT
 
 
                 }
-                else if (input.Contains("fine") && lastBotResponse == "Nero:How is your day Stephan?")
+                else if (input.Contains("fine") && lastBotResponse == "Nero:How is your day Stephan?" || input.Contains("good") && lastBotResponse == "Nero:How is your day Stephan?")
                 {
                     Console.WriteLine("Good to hear.");
                 }
