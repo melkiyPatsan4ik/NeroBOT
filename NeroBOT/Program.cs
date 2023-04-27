@@ -138,6 +138,10 @@ namespace NeroBOT
                         "Anyway you probably tried your best, and someone you made a gift should appreciate that");
                 }
                 // Add line, if human says yeah you are right. 
+                else if (words.Contains("thanks"))
+                {
+                    Console.WriteLine("Nero:You are welcome");
+                }
                 else
                 {
                     int iheitIndex = rand.Next(iheit.Length);
