@@ -92,7 +92,7 @@ namespace NeroBOT
                 else if (allYesVariations() && lastBotResponse == "Nero:And that's why you are here right?")
                 {
                     Console.WriteLine("Nero:It's easy to predict you");
-                }  
+                }
                 else if (allNoVariations() && lastBotResponse == "Nero:And that's why you are here right?")
                 {
                     Console.WriteLine("Nero:So probably just to test new phrase");
@@ -124,7 +124,7 @@ namespace NeroBOT
                         "You can ask my favourite doramas, what should you do today, say 3 random words. And I will answer with random phrase if " +
                         "you are saying something I don't know. ");
                 }
-                else if(words.Contains("what") && words.Contains("hero") && words.Contains("dota"))
+                else if (words.Contains("what") && words.Contains("hero") && words.Contains("dota"))
                 {
                     int dotaHeroCarryIndex = rand.Next(dotaHeroCarry.Length);
                     int dotaHeroSupportIndex = rand.Next(dotaHeroSupport.Length);
@@ -132,6 +132,12 @@ namespace NeroBOT
                     Console.WriteLine("Nero:For carry " + dotaHeroCarry[dotaHeroCarryIndex] +
                         " For support " + dotaHeroSupport[dotaHeroSupportIndex] + " For offlane " + dotaHeroOfflane[dotaheroOfflaneIndex]);
                 }
+                else if (words.Contains("not") && words.Contains("friend") && words.Contains("liked") && words.Contains("gift"))
+                {
+                    Console.WriteLine("Nero:And even if that's true what does that change? " +
+                        "Anyway you probably tried your best, and someone you made a gift should appreciate that");
+                }
+                // Add line, if human says yeah you are right. 
                 else
                 {
                     int iheitIndex = rand.Next(iheit.Length);
