@@ -136,9 +136,20 @@ namespace NeroBOT
                 {
                     Console.WriteLine("Nero:And even if that's true what does that change? " +
                         "Anyway you probably tried your best, and someone you made a gift should appreciate that");
+                    lastBotResponse = ("Nero:And even if that's true what does that change? " +
+                        "Anyway you probably tried your best, and someone you made a gift should appreciate that");
                 }
-                // Add line, if human says yeah you are right. 
-                else if (words.Contains("thanks"))
+                else if (allYesVariations()  && lastBotResponse == "Nero:And even if that's true what does that change? " +
+                        "Anyway you probably tried your best, and someone you made a gift should appreciate that")
+                {
+                    Console.WriteLine("Nero:Thank you for listening to me");
+                }
+                else if (allNoVariations() && lastBotResponse == "Nero:And even if that's true what does that change? " +
+        "Anyway you probably tried your best, and someone you made a gift should appreciate that")
+                {
+                    Console.WriteLine("Nero:Sadly looks like you don't like my opinion");
+                }
+                else if (words.Contains("thanks") || words.Contains("thank"))
                 {
                     Console.WriteLine("Nero:You are welcome");
                 }
